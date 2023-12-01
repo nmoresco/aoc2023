@@ -40,7 +40,7 @@ public class Util {
         return Collections.emptyList();
     }
 
-    public static void printLines(List<String> lines) {
+    public static void printLines(List<?> lines) {
         lines.forEach(System.out::println);
     }
 }
