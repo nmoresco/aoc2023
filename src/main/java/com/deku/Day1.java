@@ -35,12 +35,14 @@ public class Day1
         var result = strings.stream()
                 .map(line -> {
                     final Matcher match = pattern.matcher(line);
+
+                    // Find the first number
                     if (!match.find()) {
                         throw new IllegalStateException("No number found in line!");
                     }
+                    final String first = line.substring(match.start(), match.end());
 
-                    String first = line.substring(match.start(), match.end());
-
+                    // Search through our matches til we hit the end for the last number
                     String last = "";
                     while (!match.hitEnd()) {
                         last = line.substring(match.start(), match.end());
@@ -62,14 +64,15 @@ public class Day1
         var result = strings.stream()
                 .map(line -> {
                     final Matcher match = pattern.matcher(line);
+
+                    // Find the first number
                     if (!match.find()) {
                         throw new IllegalStateException("No number found in line!");
                     }
-
                     String first = line.substring(match.start(), match.end());
 
+                    // Search through our matches til we hit the end for the last number
                     String last = "";
-
                     while (!match.hitEnd()) {
                         last = line.substring(match.start(), match.end());
 
