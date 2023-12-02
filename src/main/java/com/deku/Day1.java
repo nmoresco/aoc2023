@@ -1,9 +1,7 @@
 package com.deku;
 
-import static com.deku.Util.printLines;
 import static com.deku.Util.readLines;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -87,6 +85,7 @@ public class Day1
                         }
                     }
 
+                    // If we found a word, turn it into a digit.
                     if (first.length() != 1) {
                         first = digitMap.get(first);
                     }
