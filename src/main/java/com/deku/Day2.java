@@ -10,12 +10,11 @@ import java.util.regex.Pattern;
 public class Day2
         implements Puzzle {
 
+    private record Game(int id, List<Round> rounds) {}
     private record Round(int red, int green, int blue) {}
 
-    private record Game(int id, List<Round> rounds) {}
-
     private static final String GAME_REGEX = "^Game (\\d+): (.+)$";
-    private static final String DICE_REGEX = "(\\d+) ([a-z]+)$";
+    private static final String DICE_REGEX = "(\\d+) ([a-z]+)";
 
     @Override public void part1() {
         final List<Game> games = parseInput(readLines("day2.txt"));

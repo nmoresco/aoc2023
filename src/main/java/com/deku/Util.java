@@ -40,7 +40,14 @@ public class Util {
         return Collections.emptyList();
     }
 
-    public static void printLines(List<?> lines) {
-        lines.forEach(System.out::println);
+    public static void printList(List<?> lines) {
+        lines.forEach(System.out::print);
+    }
+
+    public static <T> void printTable(List<List<T>> table) {
+        table.forEach(line -> {
+            printList(line);
+            System.out.println();
+        });
     }
 }
