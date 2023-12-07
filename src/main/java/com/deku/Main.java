@@ -2,7 +2,7 @@ package com.deku;
 
 public class Main {
     public static void main(String[] args) {
-        var puzzle = new Day6();
+        var puzzle = new Day7();
 
         if (args.length == 0 || !args[0].equals("p2")) {
             puzzle.part1();
