@@ -7,7 +7,7 @@ import static com.deku.Day7.THREE_OF_A_KIND;
 import static com.deku.Day7.TWO_PAIR;
 import static com.deku.Day7.cardMap;
 import static com.deku.Day7.getHandType;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 

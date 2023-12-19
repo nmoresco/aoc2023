@@ -1,6 +1,5 @@
 package com.deku;
 
-import static com.deku.Util.Pair;
 import static com.deku.Util.readLines;
 
 import java.util.Arrays;
@@ -42,8 +41,8 @@ public class Day8
             char instruction =  network.instructions[i % network.instructions.length];
 
             curNode = switch (instruction) {
-                case 'L' -> network.paths.get(curNode).getLeft();
-                case 'R'-> network.paths.get(curNode).getRight();
+                case 'L' -> network.paths.get(curNode).left();
+                case 'R'-> network.paths.get(curNode).right();
                 default -> throw new IllegalStateException("Unexpected instruction: " + instruction);
             };
 
